@@ -3,14 +3,14 @@
        "name": "Polygon",
        "chainId": 80001,
        "gateway": "0xBF62ef1486468a6bd26Dd669C06db43dEd5B849B",
-       "rpc": "<https://polygon-mumbai.g.alchemy.com/v2/Ksd4J1QVWaOJAJJNbr_nzTcJBJU-6uP3>",
+       "rpc": "https://polygon-mumbai.infura.io/v3/4458cf4d1689497b9a38b1d6bbf05e78",
        "tokenName": "Matic",
        "tokenSymbol": "MATIC"
     },
     {
        "name": "Avalanche",
        "chainId": 43113,
-       "rpc": "<https://api.avax-test.network/ext/bc/C/rpc>",
+       "rpc": "https://api.avax-test.network/ext/bc/C/rpc",
        "gateway": "0xC249632c2D40b9001FE907806902f63038B737Ab",
        "tokenName": "Avax",
        "tokenSymbol": "AVAX"

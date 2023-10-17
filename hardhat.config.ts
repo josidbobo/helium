@@ -18,6 +18,11 @@ const config: HardhatUserConfig = {
             accounts: [process.env.PRIVATE_KEY],
             network_id: 43113,
         },
+        sapphire_testnet: {
+            url: "https://testnet.sapphire.oasis.dev",
+            accounts: [process.env.PRIVATE_KEY],
+            networkId: 0xSafe,
+        }
     },
 };
 export default config;

@@ -1,5 +1,5 @@
 import { Wallet, getDefaultProvider, BigNumber, ethers } from 'ethers';
-import Lock from '../artifacts/contracts/helium.sol/helium.json';
+import json from '../artifacts/contracts/helium.sol/Helium.json';
 import Create3Deployer from '@axelar-network/axelar-gmp-sdk-solidity/artifacts/contracts/deploy/Create3Deployer.sol/Create3Deployer.json';
 import chains from '../chains.json';
 
@@ -22,7 +22,7 @@ async function main() {
         const connectedWallet = wallet.connect(provider);
         const deployerContract = new ethers.Contract(CREATE_3_DEPLOYER, Create3Deployer.abi, connectedWallet);
         const salt = ethers.utils.hexZeroPad(BigNumber.from(101), 32);
-        const creationCode = ethers.utils.solidityPack( ['bytes', 'bytes'], [Lock.bytecode, ethers.utils.defaultAbiCoder.encode(['uint256'], [unlockTime])]
+        const creationCode = ethers.utils.solidityPack( ['bytes', 'bytes'], [json.bytecode, ethers.utils.defaultAbiCoder.encode(['uint256'], [unlockTime])]
      );
   
      const deployedAddress = await deployerContract.callStatic.deploy(creationCode, salt);

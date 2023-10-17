@@ -43,7 +43,7 @@ contract Helium is ERC721, ERC721URIStorage, Ownable {
  
     function tokenURI(uint256 tokenId)
         public
-        view
+        view 
         override(ERC721, ERC721URIStorage)
         returns (string memory)
     {
